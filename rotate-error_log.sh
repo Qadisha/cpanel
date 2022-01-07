@@ -13,7 +13,7 @@ cd /home   #Nice starting point
 
 ls /var/cpanel/users | while read CPLN; do
     echo "$(date) I will now search ${CPLN}'s account for PHP error_log files ..."
-    find /home/${CPLN}/public_html -type f -name 'error_log' > ${TLOG}
+    find /home/${CPLN}/public_html -type f -name 'error_log' >> ${TLOG}
 done
 
 if [ -e ${TLOG} ]; then
