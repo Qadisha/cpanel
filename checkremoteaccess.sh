@@ -7,6 +7,7 @@ AFFECTEDACCOUNT=$(find /home -type f -name '.lastlogin' | xargs grep -R $DATE |a
 
 for account in $AFFECTEDACCOUNT
 do
+    echo $AFFECTEDACCOUNT
     SRCIP=$(echo "$account" |awk -F":" '{print $2}')
     curl https://ipinfo.io/$SRCIP
 done
