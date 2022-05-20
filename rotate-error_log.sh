@@ -25,6 +25,7 @@ if [ -e ${TLOG} ]; then
      fi
      echo "$(date) Compressing ${MLINE} into new bzip2 archive ..."
      bzip2 -9 "${MLINE}"
+     touch ${MLINE}
   done
   rm -f ${TLOG}
 fi
