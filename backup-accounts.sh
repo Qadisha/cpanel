@@ -1,5 +1,5 @@
 #!/bin/bash
-DOW=($date +%a)
+DOW=$(date +%a)
 
 # Create Backup folder for a specific date
 ssh -p23 HETZNERUSERNAME@HETZNERUSERNAME.your-storagebox.de mkdir -p QD/Webservers/www-01/$DOW
